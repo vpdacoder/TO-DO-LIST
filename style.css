@@ -10,13 +10,15 @@ body {
   width:300px;
 }
 
-ul {
-  list-style-type: none;
-}
-
-li {
+.liStyle {
   text-align: center;
   padding: 10px;
   margin: 10px;
   background: blue;
+  list-style-type: none;
+}
+
+.cross {
+  text-decoration: line-through;
+  background-color: red;
 }

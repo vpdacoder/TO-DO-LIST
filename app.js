@@ -2,6 +2,9 @@ console.log("Working");
 
 // let newTodo = $("#todo").val();
 
+
+
+
 $('#sub').on("click", function (e) {
   e.preventDefault();
   console.log("Subitmitted");
@@ -12,7 +15,13 @@ $('#sub').on("click", function (e) {
 $("#todo").on("keypress", function (e) {
   if (e.which === 13) {
   let text = $(this).val();
-  alert("Pressed Enter");
-  $('#list').append(text);
+  let li = $("<li></li>").text(text);
+  li.addClass("liStyle");
+  $('#list').append(li);
 }
+})
+
+$(".liStyle").on("click", function () {
+  console.log("clicked");
+  $(this).toggleClass("cross");
 })
