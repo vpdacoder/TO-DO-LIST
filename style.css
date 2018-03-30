@@ -1,0 +1,22 @@
+body {
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+  width:300px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  background: blue;
+}
