@@ -15,13 +15,19 @@ $('#sub').on("click", function (e) {
 $("#todo").on("keypress", function (e) {
   if (e.which === 13) {
   let text = $(this).val();
-  let li = $("<li></li>").text(text);
+  $(this).val("");
+  let li = $("<li>" +text+ "<span> X</span></li>");
   li.addClass("liStyle");
   $('#list').append(li);
 }
 })
 
-$(".liStyle").on("click", function () {
+$("ul").on("click", "li",function () {
   console.log("clicked");
   $(this).toggleClass("cross");
+})
+
+$("ul").on("click", "span", function (e) {
+  $(this).parent().remove();
+  e.stopPropagation();
 })
